@@ -1,6 +1,8 @@
 # Coding UTF-8
 _author_ = 'Jorvin'
 
+from datetime import datetime
+
 # Scrip de consola para calcular la edad segun la fecha de nacimiento
 
 print ("Bienbenido, este programa te dirá tu edad\n")
@@ -10,9 +12,10 @@ dia_de_nacimiento = int(input("día de nacimiento: "))
 mes_de_nacimiento = int(input("mes de nacimiento: "))
 año_de_nacimiento = int(input("año de nacimiento: "))
 
-año_actual = 2022
-mes_actual = 10
-dia_actual = 19
+ahora = datetime.now()
+año_actual = ahora.year
+mes_actual = ahora.month
+dia_actual = ahora.day
 
 if mes_actual >= mes_de_nacimiento:
     meses_de_mas = mes_actual - mes_de_nacimiento
